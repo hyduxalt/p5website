@@ -29,7 +29,7 @@ function polygon(radius, sides, center){
     return verticies
 }
 
-let _lerp = 0
+let _lerp = 0.1
 let lerpIncrement = 0.0001
 let squares = 10
 let v = 4
@@ -38,14 +38,14 @@ let ceneter
 function setup(){
     let canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('sketch')
-    v = random(3, 10)
+    v = random(5, 10)
 }
 
 function draw(){
     background(255)
-    center = createVector(0, (width <= 600) ? height/3 - 400 : 0)
-    translate(width/2 - center.x, height/2 - center.y)
-    let r = (width <= 600) ? 200 : 500
+    center = createVector((width <= 600) ? width : width/2, (width <= 600) ? height : height/2)
+    translate(center.x, center.y)
+    let r = (width <= 600) ? 400 : 500
     shape(polygon(r, v, createVector(0, 0)), _lerp, 0, squares)
 
     _lerp += lerpIncrement

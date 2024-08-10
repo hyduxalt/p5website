@@ -1,3 +1,4 @@
+var mAuth = "Benjamin Man"
 const gravity = 1;
 const initialNumBalls = 5;
 let balls = []
@@ -75,7 +76,7 @@ class bouncy{
         }
       } 
       else if(tr.y + this.vel.y < _br.y){
-        this.vel.y = -this.jumpHeight / 3
+        this.vel.y = -this.jumpHeight / 2
       }
       // if(tr.y > bl.y - 50){
 

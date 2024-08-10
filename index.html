@@ -8,7 +8,10 @@
 
     <script src="https://kit.fontawesome.com/43dc370da9.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js" id="p5"></script>
+    <script src="https://unpkg.com/matter-js@0.14.2/build/matter.min.js"></script>
+
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div id="sketch"></div>
@@ -18,9 +21,10 @@
             <h1>BENJAMIN MAN</h1>
             <div class="grid">
                 <div id="home">
-                    <img src="https://avatars.githubusercontent.com/u/57852213?v=4" alt="my pfp" class="pfp">
+                    <img src="pfp.png" alt="my pfp" class="pfp">
                     <p>Hi there, my name's Ben. I'm a senior at Irvington, and I enjoy creative coding, game development, and digital art among other things.</p>
                     <a href="#" id="projectsbtn">> Projects</a>
+                    <br>
                 </div>
 
                 <div id="projects" style="display: none;">
@@ -40,7 +44,7 @@
                     <a target="_blank" href="https://www.crazygames.com/game/respawn?bypassCache=at6cw">RESPAWN</a> <br>
                     <a target="_blank" href="https://www.crazygames.com/game/shadow-dungeon?bypassCache=e8g1q">Shadow Dungeon</a> <br>
                     <a target="_blank" href="https://github.com/benman604/userChrome.css">Firefox userChrome</a> <br><br>
-                </div>
+                </div> <!-- projects -->
 
                 <div>
                     <a href="https://github.com/benman604">
@@ -58,6 +62,10 @@
                     <a href="https://www.linkedin.com/in/benjamin-man-839b69196/">
                         <i class="fa-brands fa-linkedin"></i>
                         LinkedIn
+                    </a> <br>
+                    <a>
+                        <i class="fas fa-envelope"></i>
+                        <b id="clickmail">Email</b>
                     </a>
                     <br><br>
                     <div class="btn-group">
@@ -71,10 +79,12 @@
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <small><i id="author"></i></small>
+                    <a id="sourceLink" href="#" style="font-size: x-small;">View source</a>
+                </div> <!-- links sidebar -->
+            </div> <!-- grid -->
+        </div> <!-- stage -->
+    </div> <!-- container -->
 
     <script id="sketchScript"></script>
     <script src="loader.js"></script>
